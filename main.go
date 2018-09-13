@@ -566,7 +566,7 @@ func POST_Handling(c *gin.Context) {
 
 	log.Println("+------------------  A L E R T  J S O N  -------------------+")
 	log.Printf("%s", s)
-	log.Println("+-----------------------------------------------------------+\n\n")
+	log.Println("+-----------------------------------------------------------+")
 
 	// Decide how format Text
 	if cfg.TemplatePath == "" {
