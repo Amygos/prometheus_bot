@@ -1,0 +1,15 @@
+language: go
+
+script:
+  - go get -d -v
+  - go test
+  - go build
+
+deploy:
+  - provider: releases
+    api_key: ${GITHUB_TOKEN}
+    skip_cleanup: true
+    on:
+      repo: ${TRAVIS_REPO_SLUG}
+      tags: true
+    file: ${TRAVIS_BUILD_DIR}/prometheus_bot
